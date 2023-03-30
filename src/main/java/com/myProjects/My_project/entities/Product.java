@@ -24,7 +24,7 @@ public class Product implements Serializable {
 	private Long id;
 	private String name;
 	private String description;
-	private Double preco;
+	private Double price;
 	private String imgUrl;
 
 	@ManyToMany
@@ -42,7 +42,7 @@ public class Product implements Serializable {
 		this.id = id;
 		this.name = name;
 		this.description = description;
-		this.preco = preco;
+		this.price = preco;
 		this.imgUrl = imgUrl;
 	}
 
@@ -70,12 +70,12 @@ public class Product implements Serializable {
 		this.description = description;
 	}
 
-	public Double getPreco() {
-		return preco;
+	public Double getPrice() {
+		return price;
 	}
 
-	public void setPreco(Double preco) {
-		this.preco = preco;
+	public void setPrice(Double preco) {
+		this.price = preco;
 	}
 
 	public String getImgUrl() {
