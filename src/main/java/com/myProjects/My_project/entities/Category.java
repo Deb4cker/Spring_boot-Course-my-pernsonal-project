@@ -24,6 +24,7 @@ public class Category implements Serializable{
 	private Long id;
 	private String name;
 	
+	@JsonIgnore
 	@ManyToMany(mappedBy = "categories")
 	private Set<Product> products = new HashSet<>();
 	
@@ -67,7 +68,6 @@ public class Category implements Serializable{
 		return Objects.equals(id, other.id);
 	}
 
-	@JsonIgnore
 	public Set<Product> getProducts() {
 		return products;
 	}
