@@ -7,7 +7,6 @@ import java.util.Objects;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.myProjects.My_project.entities.enums.OrderStatus;
 
 import jakarta.persistence.Entity;
@@ -38,7 +37,7 @@ public class Order implements Serializable{
 	@JoinColumn(name = "client_id")
 	private User client;
 	
-	@OneToMany(mappedBy = "id.order")
+	@OneToMany(mappedBy = "id.product")
 	private Set<OrderItem> items = new HashSet<>();
 	
 	public Order() {}
